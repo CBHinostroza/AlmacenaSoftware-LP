@@ -375,7 +375,6 @@
   background-color: #fff;
   flex-basis: 300px;
   flex-grow: 1;
-  border: 1px solid #ccc;
 }
 
 .contact__information {
@@ -421,6 +420,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border: 1px solid #ccc;
 }
 
 .contact__form-label {
@@ -429,9 +429,8 @@
 }
 
 .contact__form-field {
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   width: 100%;
-  border-radius: 10px;
   height: 35px;
   padding-left: 10px;
   font-size: 0.8em;
@@ -444,28 +443,30 @@
 
 .contact__form-row--terms {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 1rem;
+  gap: 0.5rem;
 }
 
 .contact__form-check {
   appearance: auto;
-  width: 15px;
+  flex-basis: 15px;
   height: 15px;
 }
 
 .contact__form-label--terms {
   font-size: 0.7em;
   line-height: normal;
-  padding: 0 0.5rem;
   margin-bottom: 0;
+  flex-basis: 150px;
+  flex-grow: 1;
 }
 
 .contact__form-button {
   color: #ffffff;
   background-color: #18806d;
   text-align: center;
-  flex-shrink: 0;
-  width: 140px;
+  flex-basis: 140px;
   font-weight: 500;
 }
