@@ -25,7 +25,7 @@
             <a href="#testimonial">Testimonios</a>
           </li>
           <li class="header__menu-item">
-            <a href="#contacto">Contacto</a>
+            <a href="#contact">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -221,6 +221,114 @@
                 />
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact__container">
+          <h2 class="contact__title">CONTACT US</h2>
+          <div class="contact__grid">
+            <div class="contact__information">
+              <h3 class="contact__information-title">Contacta con Almacena</h3>
+              <p class="contact__information-description">
+                Crearemos contenido enlazable de alta calidad y generaremos al
+                menos 40 enlaces de alta autoridad.
+              </p>
+              <ul class="contact__information-links">
+                <li class="contact__information-item">
+                  <span><i class="fas fa-phone"></i></span>
+                  <a href="tel:+51924005627">+51 924005627</a>
+                </li>
+                <li class="contact__information-item">
+                  <span><i class="fas fa-envelope"></i></span>
+                  <a href="mailto:informacion@almacena.com"
+                    >informacion@almacena.com</a
+                  >
+                </li>
+                <li class="contact__information-item">
+                  <span><i class="fas fa-location-dot"></i></span>
+                  <a
+                    href="https://maps.app.goo.gl/LAwUPParpmFTQvbp6"
+                    target="_blank"
+                    >Lima, Perú</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <form class="contact__form" action="" method="post">
+              <div class="contact__form-row">
+                <label for="name" class="contact__form-label">Nombre</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="contact__form-field"
+                  id="name"
+                  required
+                  placeholder="Ingresa tu nombre"
+                />
+              </div>
+              <div class="contact__form-row">
+                <label for="company" class="contact__form-label">Empresa</label>
+                <input
+                  type="text"
+                  name="company"
+                  class="contact__form-field"
+                  id="company"
+                  required
+                  placeholder="Ingresa tu empresa"
+                />
+              </div>
+              <div class="contact__form-row">
+                <label for="email" class="contact__form-label">Correo</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="contact__form-field"
+                  id="email"
+                  required
+                  placeholder="Ingresa tu correo"
+                />
+              </div>
+              <div class="contact__form-row">
+                <label for="phone" class="contact__form-label">Teléfono</label>
+                <input
+                  type="text"
+                  name="phone"
+                  class="contact__form-field"
+                  id="phone"
+                  required
+                  placeholder="Ingresa un teléfono"
+                />
+              </div>
+              <div class="contact__form-row">
+                <label for="message" class="contact__form-label">Mensaje</label>
+                <textarea
+                  name="message"
+                  class="contact__form-field"
+                  id="message"
+                  required
+                  placeholder="Ingresa el mensaje"
+                ></textarea>
+              </div>
+              <div class="contact__form-row contact__form-row--terms">
+                <input
+                  class="contact__form-check"
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                />
+                <label
+                  for="terms"
+                  class="contact__form-label contact__form-label--terms"
+                >
+                  Acepto que mis datos personales serán tratados de acuerdo con
+                  la política de privacidad
+                </label>
+                <button type="submit" class="btn contact__form-button">
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
