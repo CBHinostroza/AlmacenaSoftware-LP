@@ -3,15 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/resetcss.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>Almacena Software</title>
-  </head>
+    <link rel="stylesheet" href="css/resetcss.css" />
+    <title>Document</title>
+    <style>
+      .header {
+        background-color: #242323;
+        color: #fff;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
 
+      .header__logo {
+        height: 40px;
+        width: 40px;
+      }
+
+      .header__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 900px;
+        margin: auto;
+        padding: 1rem;
+      }
+
+      .header__menu {
+        display: flex;
+        width: 100%;
+      }
+
+      .header__menu-item {
+        width: 100%;
+      }
+
+      .header__menu-item a {
+        cursor: pointer;
+        text-align: center;
+        padding: 0.5rem 1rem;
+      }
+
+      .header__toggle {
+        display: none;
+        font-size: 1.4em;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header__nav {
+          width: 100%;
+          padding-top: 4.5rem;
+          background-color: #2e2e2e;
+          position: fixed;
+          inset: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .header__nav.active {
+          opacity: 1;
+          pointer-events: all;
+          visibility: visible;
+        }
+
+        body.no-scroll {
+          overflow: hidden;
+        }
+
+        .header__menu-item:hover {
+          background-color: #3e3e3e;
+        }
+
+        .header__logo {
+          z-index: 10;
+        }
+
+        .header__toggle {
+          display: block;
+          z-index: 10;
+        }
+
+        .header__menu {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
   <body>
     <header class="header">
       <div class="header__container">
@@ -34,18 +122,6 @@
         </nav>
       </div>
     </header>
-
-    <section class="hero">
-      <div class="hero__container">
-        <h1 class="hero__title">
-          Optimiza tu almacén con Almacena Software para tu empresa
-        </h1>
-        <p class="hero__description">
-          Automatiza tu inventario, reduce errores y ahorra tiempo.
-        </p>
-        <a href="#" class="btn btn--primary">Prueba Gratis</a>
-      </div>
-    </section>
     <main>
       <section class="client">
         <div class="client__container">
@@ -337,88 +413,26 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__information">
-          <!-- Sección de contacto -->
-          <div class="footer__card footer__card--contact">
-            <h2 class="footer__card-title">Contacto</h2>
-            <ul class="footer__card-list">
-              <li class="footer__card-item">
-                <a href="tel:+51924005627" title="Llamar a (+51) 924 005 627"
-                  >(+51) 924 005 627</a
-                >
-              </li>
-              <li class="footer__card-item">
-                <a
-                  href="mailto:almacenasoftware@gmail.com"
-                  title="Enviar un correo a almacenasoftware@gmail.com"
-                  >almacenasoftware@gmail.com</a
-                >
-              </li>
-              <li class="footer__card-item">
-                <a
-                  href="https://maps.app.goo.gl/LAwUPParpmFTQvbp6"
-                  target="_blank"
-                  aria-label="Ver ubicación en mapa"
-                  >Lima, Perú</a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- Sección de enlaces legales-->
-          <nav class="footer__card footer__card--legal">
-            <h2 class="footer__card-title">Centro de Ayuda</h2>
-            <ul class="footer__card-list">
-              <li class="footer__card-item">
-                <a href="#" target="_blank">FAQ</a>
-              </li>
-              <li class="footer__card-item">
-                <a href="#" target="_blank">Políticas de Privacidad</a>
-              </li>
-              <li class="footer__card-item">
-                <a href="#" target="_blank">Políticas de Servicio</a>
-              </li>
-              <li class="footer__card-item">
-                <a href="#" target="_blank">Términos y Condiciones</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- Sección de redes sociales -->
-          <div class="footer__card footer__card--follow">
-            <h2 class="footer__card-title">Siguenos</h2>
-            <ul class="footer__card-list footer__card-list--follow">
-              <li class="footer__card-item">
-                <a
-                  href="https://www.facebook.com/people/Almacena-Software/61557672777797"
-                  aria-label="Facebook"
-                  target="_blank"
-                >
-                  <span><i class="fab fa-facebook"></i></span>
-                </a>
-              </li>
-              <li class="footer__card-item">
-                <a
-                  href="https://www.youtube.com/@bryanhinostrozasoftware"
-                  aria-label="YouTube"
-                  target="_blank"
-                >
-                  <span><i class="fab fa-youtube"></i></span>
-                </a>
-              </li>
-              <li class="footer__card-item">
-                <a href="#" aria-label="Instagram" target="_blank">
-                  <span><i class="fab fa-instagram"></i></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__signature">
-          <p class="footer__signature-copyright">© 2025 Almacena Software</p>
-        </div>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
+    <script>
+      // Selecciona el botón, el menú y los elementos del menú
+      const button = document.querySelector(".header__toggle");
+      const nav = document.querySelector(".header__nav");
+      const body = document.body;
+      const menuLinks = document.querySelectorAll(".header__menu-item a");
+
+      // Agrega el evento de click al botón para alternar la clase 'active' en el menú
+      button.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        body.classList.toggle("no-scroll");
+      });
+
+      // Agrega el evento de click a cada elemento del menú para cerrar el menú
+      menuLinks.forEach((item) => {
+        item.addEventListener("click", () => {
+          nav.classList.remove("active");
+          body.classList.remove("no-scroll");
+        });
+      });
+    </script>
   </body>
 </html>

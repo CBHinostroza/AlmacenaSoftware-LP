@@ -4,46 +4,118 @@
   box-sizing: border-box;
 }
 
+/* Hace el scroll más delgado en navegadores 
+basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e1e8eb;
+}
+
 /*Estilos de header*/
 .header {
-  position: sticky;
-  top: 0;
-  background-color: #18806d;
-  /*Old*/
   background-color: #12A493;
+  position: sticky;
+  width: 100%;
+  top: 0;
   z-index: 1000;
 }
 
-.header__nav {
-  display: flex;
-  max-width: 800px;
-  width: 90%;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
+.header__logo {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
 }
 
-.header__logo a {
-  cursor: pointer;
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
 }
 
 .header__menu {
   display: flex;
-  flex-flow: row wrap;
-  gap: 1rem;
-  align-items: center;
+  width: 100%;
+}
+
+.header__menu-item {
+  width: 100%;
 }
 
 .header__menu-item a {
-  display: block;
-  padding: 1rem;
   cursor: pointer;
-  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
 }
 
 .header__menu-item a:hover {
   color: #e0e0e0;
 }
+
+.header__toggle {
+  display: none;
+  font-size: 1.4em;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media screen and (max-width:750px) {
+
+  .header__nav {
+    width: 100%;
+    padding-top: 4.5rem;
+    background-color: #12A493;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .header__nav.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .header__menu-item:hover {
+    background-color: #3e3e3e;
+  }
+
+  .header__logo {
+    z-index: 10;
+  }
+
+  .header__toggle {
+    display: block;
+    z-index: 10;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 
 /*Estilos de sección hero*/
 .hero {
