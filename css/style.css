@@ -68,55 +68,6 @@ basados en WebKit (Chrome, Edge, Safari) */
   border: none;
 }
 
-@media screen and (max-width:750px) {
-
-  .header__nav {
-    width: 100%;
-    padding-top: 4.5rem;
-    background-color: #12A493;
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .header__nav.active {
-    opacity: 1;
-    pointer-events: all;
-    visibility: visible;
-  }
-
-  body.no-scroll {
-    overflow: hidden;
-  }
-
-  .header__menu-item:hover {
-    background-color: #3e3e3e;
-  }
-
-  .header__logo {
-    z-index: 10;
-  }
-
-  .header__toggle {
-    display: block;
-    z-index: 10;
-  }
-
-  .header__menu {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-}
-
-
 /*Estilos de sección hero*/
 .hero {
   background-color: #12A493;
@@ -133,6 +84,7 @@ basados en WebKit (Chrome, Edge, Safari) */
   text-align: center;
   padding: 1rem;
   color: #ffffff;
+  margin-top: -1px;
 }
 
 .hero__title {
@@ -609,4 +561,85 @@ basados en WebKit (Chrome, Edge, Safari) */
   margin-top: 1rem;
   text-align: right;
   padding: 0 2rem;
+}
+
+.whatsapp-fixed {
+  background-color: #12A493;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.whatsapp-fixed i {
+  font-size: 1.5em;
+}
+
+@media screen and (max-width:750px) {
+
+  .header__nav {
+    width: 100%;
+    padding-top: 4.5rem;
+    background-color: #12A493;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .header__nav.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .header__menu-item:hover {
+    background-color: #3e3e3e;
+  }
+
+  .header__logo {
+    z-index: 10;
+  }
+
+  .header__toggle {
+    display: block;
+    z-index: 10;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whatsapp-fixed span {
+    display: none;
+  }
+
+  .whatsapp-fixed {
+    padding: 15px;
+    border-radius: 50%;
+  }
+
+  .whatsapp-fixed i {
+    font-size: 2em;
+  }
 }
