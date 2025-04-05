@@ -566,8 +566,8 @@ basados en WebKit (Chrome, Edge, Safari) */
 .whatsapp-fixed {
   background-color: #12A493;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   color: #fff;
   padding: 10px 14px;
   border-radius: 50px;
