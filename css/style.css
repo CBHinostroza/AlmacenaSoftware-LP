@@ -186,14 +186,14 @@ basados en WebKit (Chrome, Edge, Safari) */
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 2rem;
-  gap: 0.8rem;
+  gap: 1.5rem;
 }
 
 .feature__card {
   border: 1px solid #f5f5f5;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  flex-basis: 280px;
+  flex-basis: 260px;
   flex-grow: 1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
@@ -487,6 +487,11 @@ basados en WebKit (Chrome, Edge, Safari) */
   margin-bottom: 0;
   flex-basis: 150px;
   flex-grow: 1;
+}
+
+.contact__form-row--terms a {
+  display: inline;
+  color: #3b3b3b;
 }
 
 .contact__form-button {
