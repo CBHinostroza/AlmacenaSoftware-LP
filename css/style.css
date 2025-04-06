@@ -154,6 +154,10 @@ basados en WebKit (Chrome, Edge, Safari) */
   width: 100px;
 }
 
+.client__list-item img {
+  filter: grayscale(1);
+}
+
 /*Sección para features*/
 .feature {
   background-color: #fff;
@@ -358,6 +362,7 @@ basados en WebKit (Chrome, Edge, Safari) */
 .testimonial__client-logo {
   width: 100px;
   height: 50px;
+  flex-shrink: 0;
 }
 
 .testimonial__client-company {
